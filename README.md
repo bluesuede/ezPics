@@ -1,3 +1,6 @@
+ezPics
+====================
+
 What
 ----------------------------------
 
@@ -16,9 +19,13 @@ Why
 ----------------------------------
 There are literally thousands of image handling jQuery plugins out there. Especially for making slideshows, lightboxes and galleries. However, I found that they all try and do way too many things at once, ending up in greater filesizes and longer load times. I've done my best to create a simple, no-fuzz plugin that can be used on simpler sites across all platforms. The minified version of ezPics is only 5kB. There are plugins out there with only a simple slideshow function that are around 5kB in size. It's all because they are trying to do too much.
 
-If you are skilled in CSS it will also be very easy for you to alter the looks of for instance the gallery view. Why would you want me to make design choices for you?
+If you are skilled in CSS it will also be very easy for you to alter the looks of for instance the gallery view. Why would you want me to make design choices for you? This plugin is not made to give a person with zero programming skills an opportunity to have a highly customizable plugin. I don't believe that a person without programming skills would even look for a jQuery plugin in the first place. This plugin is catered towards developers and giving them a backbone to keep building on.
 
+In the future
+----------------------------------
 In the future I plan on steering the development of ezPics towards better mobile looks. At it's current stage it doesn't scale very well with smaller screens and I am very aware of that. There is currently no support for touch or swiping in the plugin.
+
+I'm also planning to add support for showing the “alt”-information in the img tags in a simple yet beautiful manner. This will be optional.
 
 Documentation
 ====================
@@ -189,3 +196,43 @@ Or pasting it in to your own file:
     vertical-align:middle;
   }
 ```
+
+ezSlider
+----------------------------------
+**Setup**
+* Make an unordered list with the id “ezSlider”. Put image tags inside the list item elements:
+```sh
+<ul id="ezSlider">
+  <li><img src="img1.jpg" alt=""></li>
+  <li><img src="img2.jpg" alt=""></li>
+  <li><img src="img3.jpg" alt=""></li>
+  <li><img src="img4.jpg" alt=""></li>
+  <li><img src="img5.jpg" alt=""></li>
+</ul>
+```
+* Call the function:
+```sh
+$(function() {
+  $('#ezSlider').ezSlider();
+});
+```
+* Settings:
+```sh
+$(function() {
+  $('#ezSlider').ezSlider({
+    'fade': 500, // Integer: Fade time in milliseconds
+    'intervalTime': 5000, // Integer: Wait before it changes image in milliseconds
+	'height': 350, // Integer: Max height of the #ezSlides element
+	'dots': true, // Boolean: If buttons with links to the different image should be below images
+	'bgColor': 'white', // String: Color of the background under an image
+	'squareDots': false // Boolean: Square buttons instead of round ones
+  });
+});
+```
+**Functionality**
+
+ezLbox
+----------------------------------
+
+ezGlry
+----------------------------------
