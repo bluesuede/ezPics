@@ -8,6 +8,7 @@
   overflow:hidden;
   position:relative;
   width:100%;
+  padding:0;
 }
 
 #ezSlider li {
@@ -27,6 +28,7 @@
 
 #dots {
   text-align:center;
+  padding:0;
 }
 
 #dots li {
@@ -71,6 +73,11 @@
 }
 
 /* Style used in ezGlry */
+#ezGlry {
+  list-style-type:none;
+  padding:0;
+}
+
 #ezGlry li {
   height:7em;
   width:30%;

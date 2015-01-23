@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>ezPics</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../css/ezpics.css">
+  <link rel="stylesheet" type="text/css" href="demo.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="../js/jquery.ezpics.js"></script>
+  <script>
+    $(function() {
+	  $('#ezSlider').ezSlider();
+	
+	  $('.lightbox').click(function() {
+	    $(this).ezLbox();
+	  });
+	
+	  $('#ezGlry').ezGlry();
+    });
+  </script>
+</head>
+<body>
+
+<div id="wrapper">
+  
+    <h2>ezSlider</h2>
+	<ul id="ezSlider">
+	  <li><img src="img/mtn.jpg" alt=""></li>
+	  <li><img src="img/roads.jpg" alt=""></li>
+	  <li><img src="img/wheel.jpg" alt=""></li>
+	  <li><img src="img/sunset.jpg" alt=""></li>
+	  <li><img src="img/house.jpg" alt=""></li>
+    </ul>
+	
+	<h2>ezLbox</h2>
+	<p>Click a picture to try the lightbox</p>
+	<img src="img/wheel.jpg" class="lightbox" alt="">
+	<img src="img/sunset.jpg" class="lightbox" alt="">
+	
+	<h2>ezGlry</h2>
+	<ul id="ezGlry">
+	  <li><img src="img/mtn.jpg" alt=""></li>
+	  <li><img src="img/roads.jpg" alt=""></li>
+	  <li><img src="img/wheel.jpg" alt=""></li>
+	</ul>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+#wrapper {
+  width:95%;
+  margin:0 auto;
+  overflow:auto;
+}
+
+@media (min-width:979px) {
+  #wrapper {
+    width:960px;
+  }
+}
+
+.lightbox {
+  width:30%;
+  margin:0 10% 16px 10%;
+  float:right;
+}
