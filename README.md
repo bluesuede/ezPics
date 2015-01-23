@@ -7,13 +7,13 @@ What
 ezPics is a lightweight and free jQuery plugin that has a responsive slider, lightbox and gallery function:
 
 **ezSlider**
-Creates a slideshow of at least two pictures. Buttons under the slideshow for the user to go between pictures. Moderate customizability, explained in the documentation below.
+Creates a slideshow of at least two images. Buttons under the slideshow for the user to go between images. Moderate customizability, explained in the documentation below.
 
 **ezLbox**
-A very simple lightbox. No buttons or fancy features. It puts a picture on top of a layer that goes over the whole page.
+A very simple lightbox. No buttons or fancy features. It puts an image on top of a layer that goes over the whole page.
 
 **ezGlry**
-A barebone gallery coming with some simple css placing pictures in rows of three. When a picture is clicked it opens up in a lightbox. From within the lightbox the user can click either on the left or right side of the picture to see the previous or next picture. Slight customizability, explained in the documentation below.
+A barebone gallery coming with some simple css placing images in rows of three. When an image is clicked it opens up in a lightbox. From within the lightbox the user can click either on the left or right side of the image to see the previous or next image. Slight customizability, explained in the documentation below.
 
 Why
 ----------------------------------
@@ -27,20 +27,22 @@ In the future I plan on steering the development of ezPics towards better mobile
 
 I'm also planning to add support for showing the “alt”-information in the img tags in a simple yet beautiful manner. This will be optional.
 
+The ezLbox function will be updated with customizable fade and animation settings. Also a “X” closing button in the corner of the window.
+
 Documentation
 ====================
 
 General info
 ----------------------------------
 * ezPics have been tested in Firefox, Chrome and iOS Safari.
-* ezPics works with pictures down to 100px in width.
+* ezPics works with images down to 100px in width.
 
 Get started
 ----------------------------------
 * Include the plugin after your jQuery file:
 ```sh
 <script src="yourpath/jquery.js"></script>
-<script src="yourpath/jquery.lightboxgallery.js"></script>
+<script src="yourpath/jquery.ezpics.js"></script>
 ```
 
 * Make sure that the css is being read. Either by including the css file:
@@ -199,6 +201,16 @@ Or pasting it in to your own file:
 
 ezSlider
 ----------------------------------
+**Features**
+* Choose your own fading time.
+* Choose interval time of swapping images.
+* Decide if you want buttons or not.
+* Round or square buttons.
+* Beautiful smooth transitions.
+* Same width as parent element.
+* You can choose height of the #ezSlider element.
+* If pictures aren't as wide as the parent div, you have the possibility to choose background color.
+
 **Setup**
 * Make an unordered list with the id “ezSlider”. Put image tags inside the list item elements:
 ```sh
@@ -216,7 +228,7 @@ $(function() {
   $('#ezSlider').ezSlider();
 });
 ```
-* Settings:
+* Customize settings:
 ```sh
 $(function() {
   $('#ezSlider').ezSlider({
@@ -229,10 +241,61 @@ $(function() {
   });
 });
 ```
-**Functionality**
+**Important**
+* The first image in the first li element will determine the height of #ezSlider. Having images of the same size is the most optimal choice but if that is not possible, make sure to put the image of lowest height first in the list.
+* The background color can't be transparent, the user will then see another picture below the one in focus.
+* You can only have one slideshow per page.
 
 ezLbox
 ----------------------------------
+**Features**
+* Very, very simple. No distractions for the user.
+* Does it's job and does it fast.
+* Image will at the most be 90% of the window in either width or height.
+* Can be used by other functions.
+* User can click anywhere in the window to shut lightbox down when up.
+
+**Setup**
+* Call the function on your choice of class or id:
+```sh
+$(function() {
+  $('.yourClassName, #yourIdName').click(function() {
+    $(this).ezLbox();
+  });	  
+});
+```
+**Important**
+* ezLbox has to be called with the click event.
 
 ezGlry
 ----------------------------------
+**Features**
+* A simple gallery interface before an image has been clicked. Rows of three.
+* Possible to use on images as small as 100px wide.
+* Will align beautifully even if the pictures are different sizes and have different aspect ratios.
+* Possibility to enable or disable a counter that tells which image in order is currently being shown.
+
+**Setup**
+* Make an unordered list with the id #ezGlry:
+```sh
+<ul id="ezGlry">
+  <li><img src="img1.jpg" alt=""></li>
+  <li><img src="img2.jpg" alt=""></li>
+  <li><img src="img3.jpg" alt=""></li>
+  <li><img src="img4.jpg" alt=""></li>
+  <li><img src="img5.jpg" alt=""></li>
+</ul>
+```
+* Call the function on id #ezGlry like this:
+```sh
+$(function() {
+  $('#ezGlry').ezGlry();
+});
+```
+**Important**
+* Haven't been tested on images with width less than 100px.
+* Uses the ezLbox function to create the actual lightbox then adds links to it.
+
+License
+----------------------------------
+MIT
