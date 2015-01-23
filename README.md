@@ -4,7 +4,7 @@ ezPics
 What
 ----------------------------------
 
-ezPics is a lightweight and free jQuery plugin that has a responsive slider, lightbox and gallery function:
+ezPics is a lightweight and free jQuery plugin that has a responsive slider, lightbox and gallery function.
 
 **ezSlider**
 Creates a slideshow of at least two images. Buttons under the slideshow for the user to go between images. Moderate customizability, explained in the documentation below.
