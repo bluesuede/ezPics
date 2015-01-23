@@ -1,0 +1,146 @@
+/**
+ * Style for the ezPics jQuery plugin
+ *
+ */
+ 
+/* ezSlider style below */
+#ezSlider {
+  overflow:hidden;
+  position:relative;
+  width:100%;
+}
+
+#ezSlider li {
+  max-height:100%;
+  width:100%;
+  position:absolute;
+  display:block;
+  left:0;
+  top:0;
+}
+
+#ezSlider img {
+  max-width:100%;
+  margin:0 auto;
+  display:block;
+}
+
+#dots {
+  text-align:center;
+}
+
+#dots li {
+  display:inline;
+  float:none;
+  margin-right:5px;
+}
+
+.dot a {
+  border-radius: 15px;
+  display: inline-block;
+  height: 12px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 12px;
+}
+
+.unselected-button a {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.selected-button a {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+}
+
+/* Lightbox style, used in ezLbox och ezGlry */
+#overlay {
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  /* background:black url('../../img/loader.gif') no-repeat scroll center center;*/
+  background-color:black;
+  z-index:10;
+}
+
+#lightbox {
+  position:fixed;
+  z-index:10;
+  cursor:pointer;
+}
+
+/* Style used in ezGlry */
+#ezGlry li {
+  height:7em;
+  width:30%;
+  margin-right:5%;
+  float:left;
+  overflow:hidden;
+  margin-bottom:11px;
+}
+
+  #ezGlry img {
+    max-width:90%;
+	max-height:90%;
+	cursor:pointer;
+  }
+
+  #ezGlry li:nth-child(3n) {
+    margin-right:0;
+  }
+  
+  #ezGlry li:nth-last-child(-n + 3):nth-child(3n + 1),
+  #ezGlry li:nth-last-child(-n + 3):nth-child(3n + 1) ~ li {
+    margin-bottom:0;
+  }
+  
+.ezGlry-arrow-container {
+  position:relative;
+}
+  
+.ezGlry-arrow {
+  background-color:rgba(0,0,0,0);
+  position:fixed;
+}
+  
+  .ezGlry-arrow:hover {
+    background-color:rgba(0,0,0,0.2);
+  }
+  
+  .ezGlry-arrow-inside {
+    display:none;
+  }
+  
+  .ezGlry-arrow:hover .ezGlry-arrow-inside {
+	color:white;
+	text-shadow: 0.05em 0.05em 0.1em black;
+	font-size:1.7vw;
+  }
+  
+/**
+ * Vertical align centering solution below
+ *
+ */
+  
+  /* Parent element */
+  .ezGlry-arrow,
+  #ezGlry li  {
+    text-align:center;
+  }
+  
+  /* Pseudo element */
+  .ezGlry-arrow:before,
+  #ezGlry li:before {
+    content:"";
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+  }
+  
+  /* Centered element */
+  .ezGlry-arrow:hover .ezGlry-arrow-inside,
+  #ezGlry img  {
+    display:inline-block;
+    vertical-align:middle;
+  }
