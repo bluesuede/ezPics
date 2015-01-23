@@ -27,7 +27,19 @@ In the future I plan on steering the development of ezPics towards better mobile
 
 I'm also planning to add support for showing the “alt”-information in the img tags in a simple yet beautiful manner. This will be optional.
 
-The ezLbox function will be updated with customizable fade and animation settings. Also a “X” closing button in the corner of the window.
+The ezLbox function will be updated with customizable fade and animation settings. Also a “X” closing button in the corner of the window is in the planning.
+
+License
+----------------------------------
+Licensed under the MIT license.
+
+Copyright (c) 2015 Filip Zalamans
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Documentation
 ====================
@@ -35,19 +47,20 @@ Documentation
 General info
 ----------------------------------
 * ezPics have been tested in Firefox, Chrome and iOS Safari.
-* ezPics works with images down to 100px in width.
+* Feel free to tweak and use ezPics exactly as you want to.
+* Made with jQuery 2.1.1. Have not been tested in lower versions.
 
 Get started
 ----------------------------------
 * Include the plugin after your jQuery file:
 ```sh
 <script src="yourpath/jquery.js"></script>
-<script src="yourpath/jquery.ezpics.js"></script>
+<script src="yourpath/jquery.ezpics.min.js"></script>
 ```
 
 * Make sure that the css is being read. Either by including the css file:
 ```sh
-<link rel="stylesheet" type="text/css" href="yourpath/ezpics.css">
+<link rel="stylesheet" type="text/css" href="ezpics.css">
 ```
 Or pasting it in to your own file:
 ```sh
@@ -112,7 +125,6 @@ Or pasting it in to your own file:
   left:0;
   height:100%;
   width:100%;
-  /* background:black url('../../img/loader.gif') no-repeat scroll center center;*/
   background-color:black;
   z-index:10;
 }
@@ -295,7 +307,3 @@ $(function() {
 **Important**
 * Haven't been tested on images with width less than 100px.
 * Uses the ezLbox function to create the actual lightbox then adds links to it.
-
-License
-----------------------------------
-MIT
