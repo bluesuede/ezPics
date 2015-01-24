@@ -9,6 +9,8 @@
   position:relative;
   width:100%;
   padding:0;
+  margin:0;
+  list-style:none;
 }
 
 #ezSlider li {
@@ -18,6 +20,9 @@
   display:block;
   left:0;
   top:0;
+  overflow:hidden;
+  margin:0;
+  padding:0;
 }
 
 #ezSlider img {
