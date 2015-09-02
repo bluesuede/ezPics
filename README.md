@@ -1,6 +1,8 @@
 ezPics
 ====================
 
+Made as an assignment for a web development course at the BTH (Blekinge Tekniska Högskola) university in Sweden.
+
 What
 ----------------------------------
 
